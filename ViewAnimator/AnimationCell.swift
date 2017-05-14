@@ -41,14 +41,12 @@ class AnimationCell: UITableViewCell {
                        initialSpringVelocity: velocity,
                        options: options, animations:{ () in
                         
-                        
-                        self.moveObjectView.layoutIfNeeded()
-
                         self.moveObjectView.frame = self.stopView.frame
 
                        },
                        completion: nil)
         
+
         
     }
 }

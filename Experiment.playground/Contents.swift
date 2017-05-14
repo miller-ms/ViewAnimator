@@ -43,3 +43,4 @@ newOption = options.symmetricDifference(options.union(.curveEaseIn))
 hex = String(format: "%x", newOption.rawValue)
 
 print (hex)
+

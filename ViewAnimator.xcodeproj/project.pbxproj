@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C03187B1EC75B2A0097093F /* SpringAnimatorConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03187A1EC75B2A0097093F /* SpringAnimatorConroller.swift */; };
+		2C03187D1EC75C530097093F /* CurveAnimatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03187C1EC75C530097093F /* CurveAnimatorController.swift */; };
+		2C03187F1EC75C6A0097093F /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03187E1EC75C6A0097093F /* TransitionController.swift */; };
 		2C2D7E891EBA07C4001BE01A /* DurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D7E881EBA07C4001BE01A /* DurationCell.swift */; };
 		2C2D7E8B1EBA07E0001BE01A /* DelayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D7E8A1EBA07E0001BE01A /* DelayCell.swift */; };
 		2C2D7E8D1EBA0807001BE01A /* SpringDampingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D7E8C1EBA0807001BE01A /* SpringDampingCell.swift */; };
@@ -16,7 +19,7 @@
 		2C4558D91EB8B8730000CB21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4558D71EB8B8730000CB21 /* Main.storyboard */; };
 		2C4558DB1EB8B8730000CB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4558DA1EB8B8730000CB21 /* Assets.xcassets */; };
 		2C4558DE1EB8B8730000CB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4558DC1EB8B8730000CB21 /* LaunchScreen.storyboard */; };
-		2C66691D1EBF57C500F58C69 /* OptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66691C1EBF57C500F58C69 /* OptionsController.swift */; };
+		2C66691D1EBF57C500F58C69 /* SpringOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66691C1EBF57C500F58C69 /* SpringOptionsController.swift */; };
 		2C6669201EBF725300F58C69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C66691F1EBF725300F58C69 /* UIKit.framework */; };
 		2C6669241EBF9C4D00F58C69 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6669231EBF9C4D00F58C69 /* OptionCell.swift */; };
 		2C6669291EC132E500F58C69 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C6669261EC132E500F58C69 /* square.png */; };
@@ -24,9 +27,23 @@
 		2C66692B1EC132E500F58C69 /* square@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C6669281EC132E500F58C69 /* square@3x.png */; };
 		2C69143A1EBD8D9D0041AB82 /* AnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6914391EBD8D9D0041AB82 /* AnimationCell.swift */; };
 		2C9E4B0A1EBA0AD3000661B2 /* AnimatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E4B091EBA0AD3000661B2 /* AnimatorController.swift */; };
+		2CEF396C1EC3D4970027CECC /* CurveAnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF396B1EC3D4970027CECC /* CurveAnimationCell.swift */; };
+		2CEF396E1EC3DA2B0027CECC /* TransitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF396D1EC3DA2B0027CECC /* TransitionCell.swift */; };
+		2CEF39751EC490380027CECC /* xdest.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF396F1EC490370027CECC /* xdest.png */; };
+		2CEF39761EC490380027CECC /* xdest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF39701EC490370027CECC /* xdest@2x.png */; };
+		2CEF39771EC490380027CECC /* xdest@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF39711EC490370027CECC /* xdest@3x.png */; };
+		2CEF39781EC490380027CECC /* xsource.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF39721EC490370027CECC /* xsource.png */; };
+		2CEF39791EC490380027CECC /* xsource@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF39731EC490370027CECC /* xsource@2x.png */; };
+		2CEF397A1EC490380027CECC /* xsource@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF39741EC490370027CECC /* xsource@3x.png */; };
+		2CEF397C1EC668260027CECC /* CurveOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF397B1EC668260027CECC /* CurveOptionsController.swift */; };
+		2CEF397E1EC6683F0027CECC /* TransitionOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF397D1EC6683F0027CECC /* TransitionOptionsController.swift */; };
+		2CEF39801EC669AF0027CECC /* AnimationOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF397F1EC669AF0027CECC /* AnimationOptionsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C03187A1EC75B2A0097093F /* SpringAnimatorConroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimatorConroller.swift; sourceTree = "<group>"; };
+		2C03187C1EC75C530097093F /* CurveAnimatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveAnimatorController.swift; sourceTree = "<group>"; };
+		2C03187E1EC75C6A0097093F /* TransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionController.swift; sourceTree = "<group>"; };
 		2C2D7E881EBA07C4001BE01A /* DurationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationCell.swift; sourceTree = "<group>"; };
 		2C2D7E8A1EBA07E0001BE01A /* DelayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayCell.swift; sourceTree = "<group>"; };
 		2C2D7E8C1EBA0807001BE01A /* SpringDampingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringDampingCell.swift; sourceTree = "<group>"; };
@@ -38,7 +55,7 @@
 		2C4558DA1EB8B8730000CB21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C4558DD1EB8B8730000CB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C4558DF1EB8B8730000CB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C66691C1EBF57C500F58C69 /* OptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsController.swift; sourceTree = "<group>"; };
+		2C66691C1EBF57C500F58C69 /* SpringOptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringOptionsController.swift; sourceTree = "<group>"; };
 		2C66691F1EBF725300F58C69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2C6669211EBF836E00F58C69 /* Experiment.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Experiment.playground; sourceTree = "<group>"; };
 		2C6669231EBF9C4D00F58C69 /* OptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
@@ -47,6 +64,17 @@
 		2C6669281EC132E500F58C69 /* square@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "square@3x.png"; path = "Artwork/square@3x.png"; sourceTree = "<group>"; };
 		2C6914391EBD8D9D0041AB82 /* AnimationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationCell.swift; sourceTree = "<group>"; };
 		2C9E4B091EBA0AD3000661B2 /* AnimatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorController.swift; sourceTree = "<group>"; };
+		2CEF396B1EC3D4970027CECC /* CurveAnimationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveAnimationCell.swift; sourceTree = "<group>"; };
+		2CEF396D1EC3DA2B0027CECC /* TransitionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionCell.swift; sourceTree = "<group>"; };
+		2CEF396F1EC490370027CECC /* xdest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xdest.png; path = Artwork/xdest.png; sourceTree = "<group>"; };
+		2CEF39701EC490370027CECC /* xdest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "xdest@2x.png"; path = "Artwork/xdest@2x.png"; sourceTree = "<group>"; };
+		2CEF39711EC490370027CECC /* xdest@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "xdest@3x.png"; path = "Artwork/xdest@3x.png"; sourceTree = "<group>"; };
+		2CEF39721EC490370027CECC /* xsource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xsource.png; path = Artwork/xsource.png; sourceTree = "<group>"; };
+		2CEF39731EC490370027CECC /* xsource@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "xsource@2x.png"; path = "Artwork/xsource@2x.png"; sourceTree = "<group>"; };
+		2CEF39741EC490370027CECC /* xsource@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "xsource@3x.png"; path = "Artwork/xsource@3x.png"; sourceTree = "<group>"; };
+		2CEF397B1EC668260027CECC /* CurveOptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveOptionsController.swift; sourceTree = "<group>"; };
+		2CEF397D1EC6683F0027CECC /* TransitionOptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionOptionsController.swift; sourceTree = "<group>"; };
+		2CEF397F1EC669AF0027CECC /* AnimationOptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationOptionsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +97,8 @@
 				2C2D7E8A1EBA07E0001BE01A /* DelayCell.swift */,
 				2C2D7E8C1EBA0807001BE01A /* SpringDampingCell.swift */,
 				2C2D7E8E1EBA08C5001BE01A /* VelocityCell.swift */,
+				2CEF396B1EC3D4970027CECC /* CurveAnimationCell.swift */,
+				2CEF396D1EC3DA2B0027CECC /* TransitionCell.swift */,
 			);
 			name = ParameterCells;
 			sourceTree = "<group>";
@@ -103,8 +133,14 @@
 				2C4558DA1EB8B8730000CB21 /* Assets.xcassets */,
 				2C4558DC1EB8B8730000CB21 /* LaunchScreen.storyboard */,
 				2C4558DF1EB8B8730000CB21 /* Info.plist */,
+				2CEF397F1EC669AF0027CECC /* AnimationOptionsController.swift */,
+				2C66691C1EBF57C500F58C69 /* SpringOptionsController.swift */,
+				2CEF397D1EC6683F0027CECC /* TransitionOptionsController.swift */,
+				2CEF397B1EC668260027CECC /* CurveOptionsController.swift */,
 				2C9E4B091EBA0AD3000661B2 /* AnimatorController.swift */,
-				2C66691C1EBF57C500F58C69 /* OptionsController.swift */,
+				2C03187A1EC75B2A0097093F /* SpringAnimatorConroller.swift */,
+				2C03187C1EC75C530097093F /* CurveAnimatorController.swift */,
+				2C03187E1EC75C6A0097093F /* TransitionController.swift */,
 			);
 			path = ViewAnimator;
 			sourceTree = "<group>";
@@ -128,6 +164,12 @@
 		2C6669251EC132CB00F58C69 /* Artwork */ = {
 			isa = PBXGroup;
 			children = (
+				2CEF396F1EC490370027CECC /* xdest.png */,
+				2CEF39701EC490370027CECC /* xdest@2x.png */,
+				2CEF39711EC490370027CECC /* xdest@3x.png */,
+				2CEF39721EC490370027CECC /* xsource.png */,
+				2CEF39731EC490370027CECC /* xsource@2x.png */,
+				2CEF39741EC490370027CECC /* xsource@3x.png */,
 				2C6669261EC132E500F58C69 /* square.png */,
 				2C6669271EC132E500F58C69 /* square@2x.png */,
 				2C6669281EC132E500F58C69 /* square@3x.png */,
@@ -196,11 +238,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4558DE1EB8B8730000CB21 /* LaunchScreen.storyboard in Resources */,
+				2CEF397A1EC490380027CECC /* xsource@3x.png in Resources */,
+				2CEF39781EC490380027CECC /* xsource.png in Resources */,
+				2CEF39761EC490380027CECC /* xdest@2x.png in Resources */,
+				2CEF39771EC490380027CECC /* xdest@3x.png in Resources */,
 				2C4558DB1EB8B8730000CB21 /* Assets.xcassets in Resources */,
+				2CEF39751EC490380027CECC /* xdest.png in Resources */,
 				2C6669291EC132E500F58C69 /* square.png in Resources */,
 				2C4558D91EB8B8730000CB21 /* Main.storyboard in Resources */,
 				2C66692B1EC132E500F58C69 /* square@3x.png in Resources */,
 				2C66692A1EC132E500F58C69 /* square@2x.png in Resources */,
+				2CEF39791EC490380027CECC /* xsource@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,15 +259,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C03187F1EC75C6A0097093F /* TransitionController.swift in Sources */,
 				2C6669241EBF9C4D00F58C69 /* OptionCell.swift in Sources */,
+				2CEF397E1EC6683F0027CECC /* TransitionOptionsController.swift in Sources */,
 				2C2D7E891EBA07C4001BE01A /* DurationCell.swift in Sources */,
-				2C66691D1EBF57C500F58C69 /* OptionsController.swift in Sources */,
+				2CEF39801EC669AF0027CECC /* AnimationOptionsController.swift in Sources */,
+				2C66691D1EBF57C500F58C69 /* SpringOptionsController.swift in Sources */,
 				2C2D7E8B1EBA07E0001BE01A /* DelayCell.swift in Sources */,
+				2C03187D1EC75C530097093F /* CurveAnimatorController.swift in Sources */,
+				2C03187B1EC75B2A0097093F /* SpringAnimatorConroller.swift in Sources */,
 				2C9E4B0A1EBA0AD3000661B2 /* AnimatorController.swift in Sources */,
 				2C2D7E8F1EBA08C5001BE01A /* VelocityCell.swift in Sources */,
 				2C4558D61EB8B8730000CB21 /* ViewController.swift in Sources */,
+				2CEF396C1EC3D4970027CECC /* CurveAnimationCell.swift in Sources */,
 				2C2D7E8D1EBA0807001BE01A /* SpringDampingCell.swift in Sources */,
 				2C69143A1EBD8D9D0041AB82 /* AnimationCell.swift in Sources */,
+				2CEF396E1EC3DA2B0027CECC /* TransitionCell.swift in Sources */,
+				2CEF397C1EC668260027CECC /* CurveOptionsController.swift in Sources */,
 				2C4558D41EB8B8730000CB21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

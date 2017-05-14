@@ -24,22 +24,5 @@ class DelayCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    @IBAction func delayChanged(_ sender: UISlider, forEvent event:UIEvent) {
-        let formatter = NumberFormatter()
-        
-        formatter.numberStyle = .decimal
-        
-        formatter.maximumFractionDigits = 2
-        
-        formatter.minimumFractionDigits = 2
-        
-        formatter.maximumIntegerDigits = 2
-        
-        formatter.minimumIntegerDigits = 1
-        
-        lblValue.text = formatter.string(from: NSNumber(value: sender.value))
-        
-    }
 
 }

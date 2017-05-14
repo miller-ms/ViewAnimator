@@ -38,6 +38,49 @@ class OptionCell: UITableViewCell {
     let tagLabel = 1
     let tagSlider = 2
     
+    var isOn: Bool {
+        get {
+            if accessoryType == .checkmark {
+                return true
+            }
+            
+            return false
+        }
+        set {
+            if newValue {
+                accessoryType = .checkmark
+            } else {
+                accessoryType = .none
+            }
+        }
+    }
+    
+    var isOff: Bool {
+        get {
+            if accessoryType == .checkmark {
+                return false
+            }
+            
+            return true
+        }
+        set {
+            if newValue {
+                accessoryType = .none
+            } else {
+                accessoryType = .checkmark
+            }
+        }
+    }
+
+    
+    func toggle() {
+        
+        if isOn {
+            isOn = false
+        } else {
+            isOn = true
+        }
+    }
     
     var lblOption: UILabel  {
         
@@ -100,8 +143,10 @@ class OptionCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
+        print("Selected: \(selected) Animated \(animated)")
 
         // Configure the view for the selected state
     }
-
+    
 }
