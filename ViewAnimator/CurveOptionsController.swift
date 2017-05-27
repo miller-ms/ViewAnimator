@@ -8,17 +8,14 @@
 
 import UIKit
 
-
-
-
 class CurveOptionsController: AnimationOptionsController {
 
-    static var curveOptions:UIViewAnimationOptions = [UIViewAnimationOptions.curveEaseInOut]
-    
+    var options:OptionsModel? = nil
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        newOptions = CurveOptionsController.curveOptions
+        newOptions = options!
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -52,7 +49,7 @@ class CurveOptionsController: AnimationOptionsController {
 
     @IBAction func done(_ sender: UIBarButtonItem) {
         
-        CurveOptionsController.curveOptions = newOptions
+        options = newOptions
         
         navigationController?.popViewController(animated: true)
                 

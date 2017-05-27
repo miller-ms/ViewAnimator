@@ -33,7 +33,8 @@ class CurveAnimatorController: AnimatorController {
     }
     var duration = Double(1.0)
     var delay = Double(0.25)
-
+    var animationProperties = PropertiesModel()
+    var options = OptionsModel(options: [UIViewAnimationOptions.curveEaseInOut])
 
     var xrowHeights = [CGFloat(0), CGFloat(0), CGFloat(0), CGFloat(0), CGFloat(0), CGFloat(0), CGFloat(0)]
     
@@ -59,6 +60,24 @@ class CurveAnimatorController: AnimatorController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let section = SectionIdentifiers(rawValue: indexPath.section) else {
+            return
+        }
+        
+        let cell = tableView.cellForRow(at: indexPath)!
+        
+        cell.isSelected = false
+        
+        switch section {
+        case SectionIdentifiers.curveAnimateSection:
+            let curveCell = cell as! CurveAnimationCell
+            curveCell.reset()
+        default:
+            break
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -70,47 +89,38 @@ class CurveAnimatorController: AnimatorController {
     }
     */
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "optionsSegue" {
+            
+            let curveOptionsController = segue.destination as! CurveOptionsController
+            
+            curveOptionsController.options = options
+            
+        } else if segue.identifier == "propertiesSegue" {
+            
+            let propertiesController = segue.destination as! PropertiesController
+            
+            propertiesController.animationProperties = animationProperties
+            
+        }
+        
+    }
+    
     @IBAction func durationChanged(_ sender: UISlider) {
+                
+        let cell = sender.superview!.superview as! FloatValueCell
         
-        duration = Double(sender.value)
-        
-        let formatter = NumberFormatter()
-        
-        formatter.numberStyle = .decimal
-        
-        formatter.maximumFractionDigits = 2
-        
-        formatter.minimumFractionDigits = 2
-        
-        formatter.maximumIntegerDigits = 2
-        
-        formatter.minimumIntegerDigits = 1
-        
-        let cell = sender.superview?.superview as! DurationCell
-        
-        cell.lblValue.text = formatter.string(from: NSNumber(value: sender.value))
+        duration = Double(cell.value)
         
     }
     
     @IBAction func delayChanged(_ sender: UISlider) {
         
-        delay = Double(sender.value)
+                
+        let cell = sender.superview?.superview as! FloatValueCell
         
-        let formatter = NumberFormatter()
-        
-        formatter.numberStyle = .decimal
-        
-        formatter.maximumFractionDigits = 2
-        
-        formatter.minimumFractionDigits = 2
-        
-        formatter.maximumIntegerDigits = 2
-        
-        formatter.minimumIntegerDigits = 1
-        
-        let cell = sender.superview?.superview as! DelayCell
-        
-        cell.lblValue.text = formatter.string(from: NSNumber(value: sender.value))
+        delay = Double(cell.value)
         
     }
     
@@ -119,11 +129,11 @@ class CurveAnimatorController: AnimatorController {
         
         let cell = sender.superview?.superview as! CurveAnimationCell
         
-        let hex = String(format: "%x", CurveOptionsController.curveOptions.rawValue)
+        let hex = String(format: "%x", options.animationOptions.rawValue)
         
         print("Options for animate are \(hex)")
         
-        cell.executeAnimation(withDuration: duration, andDelay: delay, animationOptions: CurveOptionsController.curveOptions)
+        cell.executeAnimation(withDuration: duration, andDelay: delay, animationOptions: options.animationOptions, animationProperties: animationProperties)
         
     }
 

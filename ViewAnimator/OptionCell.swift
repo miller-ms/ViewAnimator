@@ -29,7 +29,7 @@ enum OptionCellIds:String {
     case preferredFramesPerSecond30Id = "preferredFramesPerSecond30"
     case preferredFramesPerSecond60Id = "preferredFramesPerSecond60"
     
-    case unknownId = "unknown"
+//    case unknownId = "unknown"
     
 }
 
@@ -94,43 +94,46 @@ class OptionCell: UITableViewCell {
     
     func cellId () -> OptionCellIds {
         
-        switch lblOption.text! {
-        case OptionCellIds.repeatId.rawValue:
-            return OptionCellIds.repeatId
-        case OptionCellIds.autoReverseId.rawValue:
-            return OptionCellIds.autoReverseId
+        guard let option = OptionCellIds(rawValue: lblOption.text!) else {
+            fatalError("Invalid option cell")
+        }
+        switch option {
+        case .repeatId:
+            return .repeatId
+        case .autoReverseId:
+            return .autoReverseId
             
-        case OptionCellIds.curveEaseInOutId.rawValue:
-            return OptionCellIds.curveEaseInOutId
-        case OptionCellIds.curveEaseInId.rawValue:
-            return OptionCellIds.curveEaseInId
-        case OptionCellIds.curveEaseOutId.rawValue:
-            return OptionCellIds.curveEaseOutId
-        case OptionCellIds.curveLinearId.rawValue:
-            return OptionCellIds.curveLinearId
+        case .curveEaseInOutId:
+            return .curveEaseInOutId
+        case .curveEaseInId:
+            return .curveEaseInId
+        case .curveEaseOutId:
+            return .curveEaseOutId
+        case .curveLinearId:
+            return .curveLinearId
             
-        case OptionCellIds.transitionFlipFromLeftId.rawValue:
-            return OptionCellIds.transitionFlipFromLeftId
-        case OptionCellIds.transitionFlipFromRightId.rawValue:
-            return OptionCellIds.transitionFlipFromRightId
-        case OptionCellIds.transitionCurlUpId.rawValue:
-            return OptionCellIds.transitionCurlUpId
-        case OptionCellIds.transitionCurlDownId.rawValue:
-            return OptionCellIds.transitionCurlDownId
-        case OptionCellIds.transitionCrossDissolveId.rawValue:
-            return OptionCellIds.transitionCrossDissolveId
-        case OptionCellIds.transitionFlipFromTopId.rawValue:
-            return OptionCellIds.transitionFlipFromTopId
-        case OptionCellIds.transitionFlipFromBottomId.rawValue:
-            return OptionCellIds.transitionFlipFromBottomId
+        case .transitionFlipFromLeftId:
+            return .transitionFlipFromLeftId
+        case .transitionFlipFromRightId:
+            return .transitionFlipFromRightId
+        case .transitionCurlUpId:
+            return .transitionCurlUpId
+        case .transitionCurlDownId:
+            return .transitionCurlDownId
+        case .transitionCrossDissolveId:
+            return .transitionCrossDissolveId
+        case .transitionFlipFromTopId:
+            return .transitionFlipFromTopId
+        case .transitionFlipFromBottomId:
+            return .transitionFlipFromBottomId
         
-        case OptionCellIds.preferredFramesPerSecond30Id.rawValue:
-            return OptionCellIds.preferredFramesPerSecond30Id
-        case OptionCellIds.preferredFramesPerSecond60Id.rawValue:
-            return OptionCellIds.preferredFramesPerSecond60Id
+        case .preferredFramesPerSecond30Id:
+            return .preferredFramesPerSecond30Id
+        case .preferredFramesPerSecond60Id:
+            return .preferredFramesPerSecond60Id
             
-        default:
-            return OptionCellIds.unknownId
+//        default:
+//            return .unknownId
             
         }
         

@@ -12,13 +12,13 @@ import UIKit
 
 
 class SpringOptionsController: AnimationOptionsController {
-    
-    static var springOptions:UIViewAnimationOptions = []
+        
+    var options:OptionsModel? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        newOptions = SpringOptionsController.springOptions
+        newOptions = options!
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -109,7 +109,7 @@ class SpringOptionsController: AnimationOptionsController {
 
     @IBAction func done(_ sender: UIBarButtonItem) {
         
-        SpringOptionsController.springOptions = newOptions
+        options = newOptions
         
         navigationController?.popViewController(animated: true)
                 

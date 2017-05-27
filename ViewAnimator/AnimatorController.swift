@@ -8,10 +8,6 @@
 
 import UIKit
 
-
-
-
-
 class AnimatorController: UITableViewController {
     
     var cellIdentifiers: [String] = []
@@ -26,8 +22,6 @@ class AnimatorController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        tableView.contentInset = UIEdgeInsetsMake(UIApplication.shared.statusBarFrame.height, 0, 0, 0)
         
 
         // Uncomment the following line to preserve selection between presentations

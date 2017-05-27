@@ -13,6 +13,7 @@ class TransitionCell: UITableViewCell {
     @IBOutlet var sourceView: UIImageView!
     @IBOutlet var destView: UIImageView!
     @IBOutlet weak var slideView: UIView!
+    @IBOutlet weak var transitionBtn: UIButton!
     
 //    var toView:UIImageView!
 //    var fromView:UIImageView!
@@ -35,10 +36,13 @@ class TransitionCell: UITableViewCell {
     
     func executeTransition(withDuration duration:Double, animationOptions options:UIViewAnimationOptions) -> Void {
         
+        
+        transitionBtn.isEnabled = false
         UIView.transition(from: sourceView,
                           to: destView,
                           duration: duration,
-                          options: options, completion: {_ in
+                          options: options,
+                          completion: {_ in
                             let tempView = self.sourceView;
                             self.sourceView = self.destView;
                             self.destView = tempView
@@ -49,10 +53,12 @@ class TransitionCell: UITableViewCell {
                                                    NSLayoutConstraint.init(item: self.destView, attribute: .top, relatedBy: .equal, toItem: self.slideView, attribute: .top, multiplier: 1, constant: 0)]
                             
                             self.slideView.addConstraints(viewConstraints)
+                            self.transitionBtn.isEnabled = true
 
                           }
+                        
+                        
         )
-        
         
     }
 

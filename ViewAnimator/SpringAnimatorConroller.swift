@@ -37,8 +37,10 @@ class SpringAnimatorConroller: AnimatorController {
     
     var duration = Double(1.0)
     var delay = Double(0.25)
-    var sprintDamping = CGFloat(0.5)
+    var springDamping = CGFloat(0.5)
     var velocity = CGFloat(0.5)
+    var animationProperties = PropertiesModel()
+    var options = OptionsModel(options: [UIViewAnimationOptions.curveEaseInOut])
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,102 +65,109 @@ class SpringAnimatorConroller: AnimatorController {
         // Dispose of any resources that can be recreated.
     }
     
+    func saveParameters () {
+        
+        var parameterPath = IndexPath(row:ParamCellIdentifiers.durationCell.rawValue, section: SectionIdentifiers.parameterSection.rawValue)
+        
+        var cell = tableView.cellForRow(at: parameterPath) as? FloatValueCell
+        
+        if cell != nil {
+            duration = Double(cell!.value)
+        }
+        
+        parameterPath = IndexPath(row:ParamCellIdentifiers.delayCell.rawValue, section: SectionIdentifiers.parameterSection.rawValue)
+        
+        cell = tableView.cellForRow(at: parameterPath) as? FloatValueCell
+        
+        if cell != nil {
+            delay = Double(cell!.value)
+        }
 
-    /*
+        parameterPath = IndexPath(row:ParamCellIdentifiers.springDampingCell.rawValue, section: SectionIdentifiers.parameterSection.rawValue)
+        
+        cell = tableView.cellForRow(at: parameterPath) as? FloatValueCell
+        
+        if cell != nil {
+            springDamping = CGFloat(cell!.value)
+        }
+        
+        parameterPath = IndexPath(row:ParamCellIdentifiers.velocityCell.rawValue, section: SectionIdentifiers.parameterSection.rawValue)
+        
+        cell = tableView.cellForRow(at: parameterPath) as? FloatValueCell
+        
+        if cell != nil {
+            velocity = CGFloat(cell!.value)
+        }
+
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let section = SectionIdentifiers(rawValue: indexPath.section) else {
+            return
+        }
+        
+        let cell = tableView.cellForRow(at: indexPath)!
+        
+        cell.isSelected = false
+        
+        switch section {
+        case .animateSection:
+            let curveCell = cell as! AnimationCell
+            curveCell.reset()
+        default:
+            break
+        }
+    }
+
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.destination is PropertiesController {
+            
+            let propertiesVC = segue.destination as! PropertiesController
+            
+            propertiesVC.animationProperties = animationProperties
+        } else if segue.destination is SpringOptionsController {
+            
+            let optionsVC = segue.destination as! SpringOptionsController
+            optionsVC.options = options
+        }
     }
-    */
 
     @IBAction func durationChanged(_ sender: UISlider) {
         
-        duration = Double(sender.value)
         
-        let formatter = NumberFormatter()
+        let cell = sender.superview!.superview as! FloatValueCell
         
-        formatter.numberStyle = .decimal
-        
-        formatter.maximumFractionDigits = 2
-        
-        formatter.minimumFractionDigits = 2
-        
-        formatter.maximumIntegerDigits = 2
-        
-        formatter.minimumIntegerDigits = 1
-        
-        let cell = sender.superview?.superview as! DurationCell
-        
-        cell.lblValue.text = formatter.string(from: NSNumber(value: sender.value))
+        duration = Double(cell.value)
+
         
     }
     
     @IBAction func delayChanged(_ sender: UISlider) {
         
-        delay = Double(sender.value)
+        let cell = sender.superview?.superview as! FloatValueCell
         
-        let formatter = NumberFormatter()
-        
-        formatter.numberStyle = .decimal
-        
-        formatter.maximumFractionDigits = 2
-        
-        formatter.minimumFractionDigits = 2
-        
-        formatter.maximumIntegerDigits = 2
-        
-        formatter.minimumIntegerDigits = 1
-        
-        let cell = sender.superview?.superview as! DelayCell
-        
-        cell.lblValue.text = formatter.string(from: NSNumber(value: sender.value))
+        delay = Double(cell.value)
         
     }
     @IBAction func springDampingChanged(_ sender: UISlider) {
         
-        sprintDamping = CGFloat(sender.value)  //(sender.value)
         
-        let formatter = NumberFormatter()
+        let cell = sender.superview!.superview as! FloatValueCell
         
-        formatter.numberStyle = .decimal
-        
-        formatter.maximumFractionDigits = 2
-        
-        formatter.minimumFractionDigits = 2
-        
-        formatter.maximumIntegerDigits = 2
-        
-        formatter.minimumIntegerDigits = 1
-        
-        let cell = sender.superview?.superview as! SpringDampingCell
-        
-        cell.lblValue.text = formatter.string(from: NSNumber(value: sender.value))
-        
+        springDamping = CGFloat(cell.value)        
     }
     
     @IBAction func springVelocityChanged(_ sender: UISlider) {
         
-        velocity = CGFloat(sender.value)
+        let cell = sender.superview!.superview as! FloatValueCell
         
-        let formatter = NumberFormatter()
-        
-        formatter.numberStyle = .decimal
-        
-        formatter.maximumFractionDigits = 2
-        
-        formatter.minimumFractionDigits = 2
-        
-        formatter.maximumIntegerDigits = 2
-        
-        formatter.minimumIntegerDigits = 1
-        
-        let cell = sender.superview?.superview as! VelocityCell
-        
-        cell.lblValue.text = formatter.string(from: NSNumber(value: sender.value))
-        
+        velocity = CGFloat(cell.value)
+
     }
     
     @IBAction func executeSpringAnimation(_ sender: UIButton) {
@@ -166,11 +175,13 @@ class SpringAnimatorConroller: AnimatorController {
         
         let cell = sender.superview?.superview as! AnimationCell
         
-        let hex = String(format: "%x", SpringOptionsController.springOptions.rawValue)
+        let hex = String(format: "%x", options.animationOptions.rawValue) // SpringOptionsController.springOptions.rawValue)
         
         print("Options for animate are \(hex)")
         
-        cell.executeAnimation(withDuration: duration, andDelay: delay, usingSpringwithDamping: sprintDamping, withInitialSpringVelocity: velocity, animationOptions: SpringOptionsController.springOptions)
+        saveParameters()
+        
+        cell.executeAnimation(withDuration: duration, andDelay: delay, usingSpringwithDamping: springDamping, withInitialSpringVelocity: velocity, animationOptions: options.animationOptions, animationProperties: animationProperties)
         
     }
     

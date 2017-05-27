@@ -12,13 +12,13 @@ import UIKit
 
 
 class TransitionOptionsController: AnimationOptionsController {
-    
-    static var transitionOptions:UIViewAnimationOptions = [UIViewAnimationOptions.transitionCrossDissolve]
+        
+    var options:OptionsModel? = nil
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        newOptions = TransitionOptionsController.transitionOptions
+        newOptions = options!
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -52,7 +52,7 @@ class TransitionOptionsController: AnimationOptionsController {
 
     @IBAction func done(_ sender: UIBarButtonItem) {
         
-        TransitionOptionsController.transitionOptions = newOptions
+        options = newOptions
         
         navigationController?.popViewController(animated: true)
                 
