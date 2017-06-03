@@ -113,7 +113,7 @@ class SpringAnimatorConroller: AnimatorController {
         
         switch section {
         case .animateSection:
-            let curveCell = cell as! AnimationCell
+            let curveCell = cell as! SpringAnimationCell
             curveCell.reset()
         default:
             break
@@ -173,7 +173,7 @@ class SpringAnimatorConroller: AnimatorController {
     @IBAction func executeSpringAnimation(_ sender: UIButton) {
         
         
-        let cell = sender.superview?.superview as! AnimationCell
+        let cell = sender.superview?.superview as! SpringAnimationCell
         
         let hex = String(format: "%x", options.animationOptions.rawValue) // SpringOptionsController.springOptions.rawValue)
         

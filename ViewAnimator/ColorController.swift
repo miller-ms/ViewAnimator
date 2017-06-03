@@ -16,13 +16,12 @@ class ColorController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var fieldGreen: UITextField!
     @IBOutlet weak var fieldBlue: UITextField!
         
-    var isStart = false
-    
     var initialColor = UIColor.blue
-    
-    var animationProperties: PropertiesModel? = nil
-    
     var inKeyboardMode = false
+    
+    var color: UIColor {
+        return colorPicker.color
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,24 +90,7 @@ class ColorController: UIViewController, UITextFieldDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
-    @IBAction func saveColor(_ sender: UIBarButtonItem) {
-        
-        if isStart {
-            animationProperties?.startBackgroundColor = colorPicker.color
-        } else {
-            animationProperties?.endBackgroundColor = colorPicker.color
-        }
-        
-        navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func cancelColor(_ sender: UIBarButtonItem) {
-        
-        navigationController?.popViewController(animated: true)
-
-    }
-    
+    */    
     @IBAction func setColorFromValues(_ sender: UIButton) {
         
         let formatter = NumberFormatter()

@@ -52,12 +52,10 @@ class PropertiesController: UITableViewController {
         
     }
     
-
-    var isInColorPicker = false
     
     var animationProperties:PropertiesModel? = nil
     
-    let cellIdentifiers: [String] = ["leftToRightId", "rightToLeftId", "stillId", "widthId", "heightId", "startBackgroundColorId", "endBackgroundColorId", "transformId"]
+    let cellIdentifiers: [String] = ["leftToRightId", "rightToLeftId", "stillId", "heightId", "widthId", "startBackgroundColorId", "endBackgroundColorId", "transformId"]
     
     var sectionHeaderTitles: [String] = ["Movement", "Size", "Color", "Transform"]
     
@@ -72,6 +70,8 @@ class PropertiesController: UITableViewController {
                                TransformationIdentifiers.count.rawValue]
     
     var rowHeights: [CGFloat] = Array(repeating: CGFloat(0), count: 8)
+    
+    var inSelectStartColor = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,29 +87,17 @@ class PropertiesController: UITableViewController {
    
     override func viewDidAppear(_ animated: Bool) {
         
-        if isInColorPicker {
-            isInColorPicker = false
-            let endPath = IndexPath(row: ColorCellIdentifiers.endBackgroundColorCell.rawValue, section: SectionIdentifiers.colorSection.rawValue)
-            var cell = tableView.cellForRow(at: endPath)
-            if cell != nil {
-                tableView(tableView, willDisplay: cell!, forRowAt: endPath)
-            }
-
-            let startPath = IndexPath(row: ColorCellIdentifiers.startBackgroundColorCell.rawValue, section: SectionIdentifiers.colorSection.rawValue)
-            cell = tableView.cellForRow(at: startPath)
-            if cell != nil {
-                tableView(tableView, willDisplay: cell!, forRowAt: startPath)
-            }
-            
-        }
-        
         return;
         
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        tableView.cellForRow(at: indexPath)?.isSelected = false
+        guard let cell = tableView.cellForRow(at: indexPath) else {
+            fatalError("Invalid indexpath \(indexPath) in properties controller ")
+        }
+            
+        cell.isSelected = false
         
         guard let section = SectionIdentifiers(rawValue:indexPath.section) else {
             fatalError("invalid section in properties controller")
@@ -126,6 +114,28 @@ class PropertiesController: UITableViewController {
                 cell = tableView.cellForRow(at: indexPath)
                 cell!.accessoryType = .checkmark
             }
+        case .colorSection:
+            guard let rowId = ColorCellIdentifiers(rawValue: indexPath.row) else {
+                fatalError("Invalid row in color section of properties controller")
+            }
+            
+            guard let colorCell = (cell as? ColorCell) else {
+                
+                fatalError("Invalid colorCell in color section of properties controller")
+   
+            }
+            
+            if rowId == .endBackgroundColorCell {
+                
+                animationProperties!.endBackgroundAlpha = Float(colorCell.alphaProperty)
+                
+            } else if rowId == .startBackgroundColorCell {
+                animationProperties!.startBackgroundAlpha = Float(colorCell.alphaProperty)
+
+            } else {
+                fatalError("Invalid cellId in color section of properties controller")
+            }
+            
             
         default:
             break
@@ -373,21 +383,26 @@ class PropertiesController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let colorController = segue.destination as! ColorController
-        
-        colorController.animationProperties = animationProperties
-        
-        isInColorPicker = true
-        
-        let cell = sender as! UITableViewCell
-        
-        if cell.reuseIdentifier == "startBackgroundColorId" {
+        switch segue.identifier! {
+        case "startColorSegueId":
+            let colorController = segue.destination as! ColorController
             colorController.initialColor = animationProperties!.startBackgroundColor
-            colorController.isStart = true
-        } else {
+            inSelectStartColor = true
+
+        case "endColorSegueId":
+            let colorController = segue.destination as! ColorController
             colorController.initialColor = animationProperties!.endBackgroundColor
-            colorController.isStart = false
+            inSelectStartColor = false
+            
+        case "affineSegueId":
+            let affineController = segue.destination as! AffineController
+            affineController.animationProperties = animationProperties
+            break
+            
+        default:
+            fatalError("Invalid segue from propertiesContorller")
         }
+        
     }
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         navigationController!.popViewController(animated: true)
@@ -398,6 +413,40 @@ class PropertiesController: UITableViewController {
         transferPropertiesFromCells()
         
         navigationController?.popViewController(animated: true)
+        
+    }
+    
+    @IBAction func cancelSegue(_ segue:UIStoryboardSegue) {
+        
+        return
+        
+    }
+    
+    @IBAction func saveColorSegue(_ segue:UIStoryboardSegue) {
+        
+        switch inSelectStartColor {
+        case true:
+            let colorCtl = segue.source as! ColorController
+            animationProperties?.startBackgroundColor = colorCtl.color
+
+            let startPath = IndexPath(row: ColorCellIdentifiers.startBackgroundColorCell.rawValue, section: SectionIdentifiers.colorSection.rawValue)
+            let cell = tableView.cellForRow(at: startPath)
+            if cell != nil {
+                tableView(tableView, willDisplay: cell!, forRowAt: startPath)
+            }
+
+
+        case false:
+            let colorCtl = segue.source as! ColorController
+            animationProperties?.endBackgroundColor = colorCtl.color
+
+            let endPath = IndexPath(row: ColorCellIdentifiers.endBackgroundColorCell.rawValue, section: SectionIdentifiers.colorSection.rawValue)
+            let cell = tableView.cellForRow(at: endPath)
+            if cell != nil {
+                tableView(tableView, willDisplay: cell!, forRowAt: endPath)
+            }
+
+        }
         
     }
     

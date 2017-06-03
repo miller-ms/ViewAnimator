@@ -15,13 +15,15 @@
 		2C4558D91EB8B8730000CB21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4558D71EB8B8730000CB21 /* Main.storyboard */; };
 		2C4558DB1EB8B8730000CB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4558DA1EB8B8730000CB21 /* Assets.xcassets */; };
 		2C4558DE1EB8B8730000CB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4558DC1EB8B8730000CB21 /* LaunchScreen.storyboard */; };
+		2C547C141EDCA6F800965B10 /* AffineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C547C131EDCA6F800965B10 /* AffineController.swift */; };
+		2C547C161EDD1F1700965B10 /* RotateAffineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C547C151EDD1F1700965B10 /* RotateAffineCell.swift */; };
+		2C547C191EE277C600965B10 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2C547C181EE277C600965B10 /* .gitignore */; };
 		2C66691D1EBF57C500F58C69 /* SpringOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66691C1EBF57C500F58C69 /* SpringOptionsController.swift */; };
 		2C6669201EBF725300F58C69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C66691F1EBF725300F58C69 /* UIKit.framework */; };
 		2C6669241EBF9C4D00F58C69 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6669231EBF9C4D00F58C69 /* OptionCell.swift */; };
-		2C69143A1EBD8D9D0041AB82 /* AnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6914391EBD8D9D0041AB82 /* AnimationCell.swift */; };
+		2C69143A1EBD8D9D0041AB82 /* SpringAnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6914391EBD8D9D0041AB82 /* SpringAnimationCell.swift */; };
 		2C7513011ECF20A2009366A1 /* PropertiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7513001ECF20A2009366A1 /* PropertiesModel.swift */; };
 		2C7513031ED079AE009366A1 /* OptionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7513021ED079AE009366A1 /* OptionsModel.swift */; };
-		2C7513051ED09773009366A1 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7513041ED09773009366A1 /* ColorPicker.swift */; };
 		2C7513071ED30CAC009366A1 /* FloatValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7513061ED30CAC009366A1 /* FloatValueCell.swift */; };
 		2C9DC3541ECAAAD40085F88A /* SwiftHSVColorPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9DC3531ECAAAD40085F88A /* SwiftHSVColorPicker.framework */; };
 		2C9DC3571ECBFCA10085F88A /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9DC3561ECBFCA10085F88A /* ColorCell.swift */; };
@@ -49,14 +51,16 @@
 		2C4558DA1EB8B8730000CB21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C4558DD1EB8B8730000CB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C4558DF1EB8B8730000CB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C547C131EDCA6F800965B10 /* AffineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AffineController.swift; sourceTree = "<group>"; };
+		2C547C151EDD1F1700965B10 /* RotateAffineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotateAffineCell.swift; sourceTree = "<group>"; };
+		2C547C181EE277C600965B10 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2C66691C1EBF57C500F58C69 /* SpringOptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringOptionsController.swift; sourceTree = "<group>"; };
 		2C66691F1EBF725300F58C69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2C6669211EBF836E00F58C69 /* Experiment.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Experiment.playground; sourceTree = "<group>"; };
 		2C6669231EBF9C4D00F58C69 /* OptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
-		2C6914391EBD8D9D0041AB82 /* AnimationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationCell.swift; sourceTree = "<group>"; };
+		2C6914391EBD8D9D0041AB82 /* SpringAnimationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimationCell.swift; sourceTree = "<group>"; };
 		2C7513001ECF20A2009366A1 /* PropertiesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesModel.swift; sourceTree = "<group>"; };
 		2C7513021ED079AE009366A1 /* OptionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsModel.swift; sourceTree = "<group>"; };
-		2C7513041ED09773009366A1 /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		2C7513061ED30CAC009366A1 /* FloatValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatValueCell.swift; sourceTree = "<group>"; };
 		2C9DC3531ECAAAD40085F88A /* SwiftHSVColorPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHSVColorPicker.framework; path = "../../../../Library/Developer/Xcode/DerivedData/ViewAnimator-cwgmcqomxufoddbgtmsprhzprkav/Build/Products/Debug-iphonesimulator/SwiftHSVColorPicker/SwiftHSVColorPicker.framework"; sourceTree = "<group>"; };
 		2C9DC3561ECBFCA10085F88A /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
@@ -100,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				2C7513061ED30CAC009366A1 /* FloatValueCell.swift */,
-				2C6914391EBD8D9D0041AB82 /* AnimationCell.swift */,
+				2C6914391EBD8D9D0041AB82 /* SpringAnimationCell.swift */,
 				2CEF396B1EC3D4970027CECC /* CurveAnimationCell.swift */,
 				2CEF396D1EC3DA2B0027CECC /* TransitionCell.swift */,
 			);
@@ -110,6 +114,7 @@
 		2C4558C71EB8B8730000CB21 = {
 			isa = PBXGroup;
 			children = (
+				2C547C171EE276C000965B10 /* Metadata */,
 				2C6669211EBF836E00F58C69 /* Experiment.playground */,
 				2C4558D21EB8B8730000CB21 /* ViewAnimator */,
 				2C4558D11EB8B8730000CB21 /* Products */,
@@ -132,28 +137,36 @@
 				2C9DC3551ECBFC4E0085F88A /* PropertyCells */,
 				2C6669221EBF9C1C00F58C69 /* OptionCells */,
 				2C2D7E871EBA071D001BE01A /* ParameterCells */,
-				2C4558D31EB8B8730000CB21 /* AppDelegate.swift */,
-				2C4558D51EB8B8730000CB21 /* ViewController.swift */,
-				2C4558D71EB8B8730000CB21 /* Main.storyboard */,
-				2C4558DA1EB8B8730000CB21 /* Assets.xcassets */,
-				2C4558DC1EB8B8730000CB21 /* LaunchScreen.storyboard */,
-				2C4558DF1EB8B8730000CB21 /* Info.plist */,
+				2C547C131EDCA6F800965B10 /* AffineController.swift */,
 				2CEF397F1EC669AF0027CECC /* AnimationOptionsController.swift */,
 				2C9E4B091EBA0AD3000661B2 /* AnimatorController.swift */,
+				2C4558D31EB8B8730000CB21 /* AppDelegate.swift */,
+				2C4558DA1EB8B8730000CB21 /* Assets.xcassets */,
 				2CE417711ECA6CFD00C1CC4C /* ColorController.swift */,
-				2C7513041ED09773009366A1 /* ColorPicker.swift */,
 				2C03187C1EC75C530097093F /* CurveAnimatorController.swift */,
 				2CEF397B1EC668260027CECC /* CurveOptionsController.swift */,
+				2C4558DF1EB8B8730000CB21 /* Info.plist */,
+				2C4558DC1EB8B8730000CB21 /* LaunchScreen.storyboard */,
+				2C4558D71EB8B8730000CB21 /* Main.storyboard */,
 				2C7513021ED079AE009366A1 /* OptionsModel.swift */,
+				2CE4176D1EC8968300C1CC4C /* podfile */,
 				2CE4176F1EC9DCAB00C1CC4C /* PropertiesController.swift */,
 				2C7513001ECF20A2009366A1 /* PropertiesModel.swift */,
 				2C03187A1EC75B2A0097093F /* SpringAnimatorConroller.swift */,
 				2C66691C1EBF57C500F58C69 /* SpringOptionsController.swift */,
 				2C03187E1EC75C6A0097093F /* TransitionController.swift */,
 				2CEF397D1EC6683F0027CECC /* TransitionOptionsController.swift */,
-				2CE4176D1EC8968300C1CC4C /* podfile */,
+				2C4558D51EB8B8730000CB21 /* ViewController.swift */,
 			);
 			path = ViewAnimator;
+			sourceTree = "<group>";
+		};
+		2C547C171EE276C000965B10 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				2C547C181EE277C600965B10 /* .gitignore */,
+			);
+			name = Metadata;
 			sourceTree = "<group>";
 		};
 		2C66691E1EBF725300F58C69 /* Frameworks */ = {
@@ -177,6 +190,7 @@
 		2C9DC3551ECBFC4E0085F88A /* PropertyCells */ = {
 			isa = PBXGroup;
 			children = (
+				2C547C151EDD1F1700965B10 /* RotateAffineCell.swift */,
 				2C9DC3561ECBFCA10085F88A /* ColorCell.swift */,
 			);
 			name = PropertyCells;
@@ -245,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C547C191EE277C600965B10 /* .gitignore in Resources */,
 				2C4558DE1EB8B8730000CB21 /* LaunchScreen.storyboard in Resources */,
 				2CE4176E1EC8968300C1CC4C /* podfile in Resources */,
 				2C4558DB1EB8B8730000CB21 /* Assets.xcassets in Resources */,
@@ -322,11 +337,12 @@
 				2C4558D61EB8B8730000CB21 /* ViewController.swift in Sources */,
 				2CEF396C1EC3D4970027CECC /* CurveAnimationCell.swift in Sources */,
 				2C7513071ED30CAC009366A1 /* FloatValueCell.swift in Sources */,
-				2C69143A1EBD8D9D0041AB82 /* AnimationCell.swift in Sources */,
+				2C69143A1EBD8D9D0041AB82 /* SpringAnimationCell.swift in Sources */,
 				2C7513011ECF20A2009366A1 /* PropertiesModel.swift in Sources */,
 				2CEF396E1EC3DA2B0027CECC /* TransitionCell.swift in Sources */,
-				2C7513051ED09773009366A1 /* ColorPicker.swift in Sources */,
+				2C547C161EDD1F1700965B10 /* RotateAffineCell.swift in Sources */,
 				2CEF397C1EC668260027CECC /* CurveOptionsController.swift in Sources */,
+				2C547C141EDCA6F800965B10 /* AffineController.swift in Sources */,
 				2C4558D41EB8B8730000CB21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
