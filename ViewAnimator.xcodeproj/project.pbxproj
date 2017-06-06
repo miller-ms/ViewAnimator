@@ -10,6 +10,9 @@
 		2C03187B1EC75B2A0097093F /* SpringAnimatorConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03187A1EC75B2A0097093F /* SpringAnimatorConroller.swift */; };
 		2C03187D1EC75C530097093F /* CurveAnimatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03187C1EC75C530097093F /* CurveAnimatorController.swift */; };
 		2C03187F1EC75C6A0097093F /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03187E1EC75C6A0097093F /* TransitionController.swift */; };
+		2C3792B21EE5858D00DD5BDF /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 2C3792B11EE5858D00DD5BDF /* CHANGELOG.md */; };
+		2C3792B41EE5859600DD5BDF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2C3792B31EE5859600DD5BDF /* LICENSE */; };
+		2C3792B61EE5869900DD5BDF /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2C3792B51EE5869900DD5BDF /* .travis.yml */; };
 		2C4558D41EB8B8730000CB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4558D31EB8B8730000CB21 /* AppDelegate.swift */; };
 		2C4558D61EB8B8730000CB21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4558D51EB8B8730000CB21 /* ViewController.swift */; };
 		2C4558D91EB8B8730000CB21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4558D71EB8B8730000CB21 /* Main.storyboard */; };
@@ -18,6 +21,7 @@
 		2C547C141EDCA6F800965B10 /* AffineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C547C131EDCA6F800965B10 /* AffineController.swift */; };
 		2C547C161EDD1F1700965B10 /* RotateAffineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C547C151EDD1F1700965B10 /* RotateAffineCell.swift */; };
 		2C547C191EE277C600965B10 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2C547C181EE277C600965B10 /* .gitignore */; };
+		2C547C1B1EE2797600965B10 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2C547C1A1EE2797600965B10 /* README.md */; };
 		2C66691D1EBF57C500F58C69 /* SpringOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66691C1EBF57C500F58C69 /* SpringOptionsController.swift */; };
 		2C6669201EBF725300F58C69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C66691F1EBF725300F58C69 /* UIKit.framework */; };
 		2C6669241EBF9C4D00F58C69 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6669231EBF9C4D00F58C69 /* OptionCell.swift */; };
@@ -44,6 +48,9 @@
 		2C03187A1EC75B2A0097093F /* SpringAnimatorConroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimatorConroller.swift; sourceTree = "<group>"; };
 		2C03187C1EC75C530097093F /* CurveAnimatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveAnimatorController.swift; sourceTree = "<group>"; };
 		2C03187E1EC75C6A0097093F /* TransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionController.swift; sourceTree = "<group>"; };
+		2C3792B11EE5858D00DD5BDF /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		2C3792B31EE5859600DD5BDF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2C3792B51EE5869900DD5BDF /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		2C4558D01EB8B8730000CB21 /* ViewAnimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewAnimator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4558D31EB8B8730000CB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4558D51EB8B8730000CB21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +61,7 @@
 		2C547C131EDCA6F800965B10 /* AffineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AffineController.swift; sourceTree = "<group>"; };
 		2C547C151EDD1F1700965B10 /* RotateAffineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotateAffineCell.swift; sourceTree = "<group>"; };
 		2C547C181EE277C600965B10 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2C547C1A1EE2797600965B10 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2C66691C1EBF57C500F58C69 /* SpringOptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringOptionsController.swift; sourceTree = "<group>"; };
 		2C66691F1EBF725300F58C69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2C6669211EBF836E00F58C69 /* Experiment.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Experiment.playground; sourceTree = "<group>"; };
@@ -164,6 +172,10 @@
 		2C547C171EE276C000965B10 /* Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				2C547C1A1EE2797600965B10 /* README.md */,
+				2C3792B51EE5869900DD5BDF /* .travis.yml */,
+				2C3792B31EE5859600DD5BDF /* LICENSE */,
+				2C3792B11EE5858D00DD5BDF /* CHANGELOG.md */,
 				2C547C181EE277C600965B10 /* .gitignore */,
 			);
 			name = Metadata;
@@ -259,10 +271,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3792B41EE5859600DD5BDF /* LICENSE in Resources */,
 				2C547C191EE277C600965B10 /* .gitignore in Resources */,
 				2C4558DE1EB8B8730000CB21 /* LaunchScreen.storyboard in Resources */,
 				2CE4176E1EC8968300C1CC4C /* podfile in Resources */,
 				2C4558DB1EB8B8730000CB21 /* Assets.xcassets in Resources */,
+				2C3792B61EE5869900DD5BDF /* .travis.yml in Resources */,
 				2C4558D91EB8B8730000CB21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +344,7 @@
 				2CEF397E1EC6683F0027CECC /* TransitionOptionsController.swift in Sources */,
 				2CE417701EC9DCAB00C1CC4C /* PropertiesController.swift in Sources */,
 				2CEF39801EC669AF0027CECC /* AnimationOptionsController.swift in Sources */,
+				2C547C1B1EE2797600965B10 /* README.md in Sources */,
 				2C66691D1EBF57C500F58C69 /* SpringOptionsController.swift in Sources */,
 				2C03187D1EC75C530097093F /* CurveAnimatorController.swift in Sources */,
 				2C03187B1EC75B2A0097093F /* SpringAnimatorConroller.swift in Sources */,
@@ -340,6 +355,7 @@
 				2C69143A1EBD8D9D0041AB82 /* SpringAnimationCell.swift in Sources */,
 				2C7513011ECF20A2009366A1 /* PropertiesModel.swift in Sources */,
 				2CEF396E1EC3DA2B0027CECC /* TransitionCell.swift in Sources */,
+				2C3792B21EE5858D00DD5BDF /* CHANGELOG.md in Sources */,
 				2C547C161EDD1F1700965B10 /* RotateAffineCell.swift in Sources */,
 				2CEF397C1EC668260027CECC /* CurveOptionsController.swift in Sources */,
 				2C547C141EDCA6F800965B10 /* AffineController.swift in Sources */,
