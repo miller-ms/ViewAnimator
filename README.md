@@ -1,10 +1,8 @@
 # ViewAnimator
 
-[![CI Status](http://img.shields.io/travis/miller-ms/ViewAnimator.svg?style=flat)](https://travis-ci.org/miller-ms/ViewAnimator)
-[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)](https://github.com/miller-ms/ViewAnimator)
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/miller-ms/ViewAnimator)
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://travis-ci.org/miller-ms/ViewAnimator)
-[![Platform](https://img.shields.io/cocoapods/p/MMSProfileImagePicker.svg?style=flat)]()
+[![Github All Releases](https://img.shields.io/github/downloads/miller-ms/ViewAnimator/total.svg)](https://github.com/miller-ms/ViewAnimator)
+[![GitHub release](https://img.shields.io/github/release/miller-ms/viewanimator.svg)](https://github.com/miller-ms/ViewAnimator)
+[![Travis](https://img.shields.io/travis/miller-ms/ViewAnimator.svg)](https://travis-ci.org/miller-ms/ViewAnimator)
 
 ViewAnimator is a developer utility that allows you to evaluate the different animations and transitions available by the static methods of the UIView class.  
 <p align="center">
