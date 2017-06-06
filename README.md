@@ -1,13 +1,16 @@
 # ViewAnimator
 
 [![CI Status](http://img.shields.io/travis/miller-ms/ViewAnimator.svg?style=flat)](https://travis-ci.org/miller-ms/ViewAnimator)
-[![License](https://img.shields.io/cocoapods/l/MMSProfileImagePicker.svg?style=flat)](http://cocoapods.org/pods/MMSProfileImagePicker)
+[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)](https://github.com/miller-ms/ViewAnimator)
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/miller-ms/ViewAnimator)
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://travis-ci.org/miller-ms/ViewAnimator)
 [![Platform](https://img.shields.io/cocoapods/p/MMSProfileImagePicker.svg?style=flat)]()
 
 ViewAnimator is a developer utility that allows you to evaluate the different animations and transitions available by the static methods of the UIView class.  
 <p align="center">
 <img src="screenshot.gif" alt="Example">
 </p>
+
 ## Basic Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
